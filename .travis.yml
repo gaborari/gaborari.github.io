@@ -1,22 +1,24 @@
-language: ruby
-cache: bundler
-branches:
-  only:
-  - release
-jobs:
+matrix:
   include:
-    - stage: build
-      script: ./ci-build.rb
-    - stage: jekyll-bundle
-      script: JEKYLL_ENV=production bundle exec jekyll build --destination site
-deploy:
-  provider: pages
-  local-dir: ./site
-  target-branch: master
-  email: deploy@travis-ci.org
-  name: Deployment Bot
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  on:
-    branch: release
+    - language: bash
+      script: echo Test
+    - language: ruby
+      cache: bundler
+      branches:
+        only:
+        - release
+      jobs:
+        include:
+          - stage: jekyll-bundle
+            script: JEKYLL_ENV=production bundle exec jekyll build --destination site
+      deploy:
+        provider: pages
+        local-dir: ./site
+        target-branch: master
+        email: deploy@travis-ci.org
+        name: Deployment Bot
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        keep-history: true
+        on:
+          branch: release
