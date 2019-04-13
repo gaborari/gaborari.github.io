@@ -13,7 +13,7 @@ jobs:
       script: "node -v"
 deploy:
   provider: pages
-  local-dir: ./site
+  local-dir: ./dist
   target-branch: master
   email: deploy@travis-ci.org
   name: Deployment Bot
