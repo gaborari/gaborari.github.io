@@ -3,8 +3,12 @@ cache: bundler
 branches:
   only:
   - release
-script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+jobs:
+  include:
+    - stage: build
+      script: ./_ci-build.rb
+    - stage: jekyll-bundle
+      script: JEKYLL_ENV=production bundle exec jekyll build --destination site
 deploy:
   provider: pages
   local-dir: ./site
