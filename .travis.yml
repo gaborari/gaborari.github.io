@@ -9,8 +9,6 @@ jobs:
     - stage: build
       node_js: "0.10"
       script: "node -v"
-    - stage: jekyll-bundle
-      script: JEKYLL_ENV=production bundle exec jekyll build --destination site
 deploy:
   provider: pages
   local-dir: ./site
