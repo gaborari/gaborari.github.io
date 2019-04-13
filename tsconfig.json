@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "incremental": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "suppressImplicitAnyIndexErrors": true,
+        "types": [
+            "node",
+            "jasmine",
+            "systemjs",
+            "lodash",
+            "applicationinsights-js",
+            "arcgis-js-api"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
