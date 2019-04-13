@@ -1,0 +1,19 @@
+title: gaborari.io
+email: arigabor@gmail.com
+description: >-
+  TLDR.
+baseurl: ""
+url: "https://gaborari.github.io"
+github_username:  gaborari
+
+plugins_dir: ./_plugins
+
+jekyll_get:
+  - data: github
+    json: 'https://api.github.com/users/gaborari/repos'
+    cache: true
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
