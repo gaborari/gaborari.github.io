@@ -8,6 +8,8 @@ jobs:
   include:
     - stage: build
       language: nodejs
+      before_script:
+        - npm install -g gulp-cli
       script: gulp
 deploy:
   provider: pages
