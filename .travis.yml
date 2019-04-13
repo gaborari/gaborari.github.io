@@ -11,6 +11,9 @@ jobs:
   include:
     - stage: build
       language: node_js
+      node_js:  
+        - "10.13.0"
+        - node   # <-- add this to your .travis.yml for Node.js projects
       before_script:
         - npm install -g gulp-cli
       script: gulp
