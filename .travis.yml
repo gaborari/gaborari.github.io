@@ -10,7 +10,7 @@ jobs:
       language: node_js
       before_script:
         - npm install -g gulp-cli
-      script: "node -v"
+      script: gulp
 deploy:
   provider: pages
   local-dir: ./dist
