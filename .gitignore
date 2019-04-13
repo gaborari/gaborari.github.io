@@ -63,3 +63,4 @@ typings/
 _site
 .sass-cache
 .jekyll-metadata
+dist/
