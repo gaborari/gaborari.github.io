@@ -1,13 +1,11 @@
 
-language: ruby
-cache: bundler
 branches:
   only:
   - release
 jobs:
   include:
     - stage: build
-      language: nodejs
+      language: node_js
       before_script:
         - npm install -g gulp-cli
       script: gulp
