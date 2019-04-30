@@ -1,0 +1,1 @@
+{"version":3,"sources":["common/valami.ts"],"names":[],"mappings":";;AAAA;IACI;;OAEG;IACH;QACI,OAAO,CAAC,GAAG,CAAC,MAAM,CAAC,CAAC;IACxB,CAAC;IACL,WAAC;AAAD,CAPA,AAOC,IAAA","file":"../../common/valami.js","sourcesContent":["export default class Test {\r\n    /**\r\n     *\r\n     */\r\n    constructor() {\r\n        console.log('tset');\r\n    }\r\n}\r\n"]}
