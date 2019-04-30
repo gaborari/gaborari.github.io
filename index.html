@@ -1,1 +1,23 @@
-<!DOCTYPE html><html><base href="/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link href="style.min.css" rel="stylesheet"><link href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" rel="stylesheet"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.1/themes/prism-okaidia.min.css" rel="stylesheet"><link href="/vendor/@material/mdc.linear-progress.min.css" rel="stylesheet"><body id="index"><div id="errorPanel"></div><span id="loading-string" class="splash-title"></span><h3>Testcafe example site</h3></body><script type="text/javascript" src="vendor/@material/mdc.linearProgress.js" class="preloader"></script><script type="text/javascript" src="./app/bootstrap/splashLoader.js" class="preloader"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.6.1/oidc-client.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.4/shim.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.8.29/zone.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.6/system.src.js"></script><script type="text/javascript" src="systemjs.config.js"></script><script src="vendor/dependencies.bundle.min.js"></script></html>
+<!DOCTYPE html><html><base href="/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link href="style.min.css" rel="stylesheet"><link href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" rel="stylesheet"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.1/themes/prism-okaidia.min.css" rel="stylesheet"><link href="/vendor/@material/mdc.linear-progress.min.css" rel="stylesheet"><body id="index"><div id="errorPanel"></div><span id="loading-string" class="splash-title"></span><h3>Testcafe example site</h3></body><script type="text/javascript" src="vendor/@material/mdc.linearProgress.js" class="preloader"></script><script type="text/javascript" src="./app/bootstrap/splashLoader.js" class="preloader"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.6.1/oidc-client.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.4/shim.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.8.29/zone.min.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.6/system.src.js"></script><script type="text/javascript" src="systemjs.config.js"></script><script>(function () {
+        function loadApplication() {
+            SystemJS.import('app/bootstrap').catch(function (err) {
+                showLoadingError(err);
+                console.error(err);
+            });
+        }
+
+        var head = document.getElementsByTagName('head')[0];
+        var environment = '';
+        var js = document.createElement('script');
+        js.async = true;
+        js.addEventListener('load', function () {
+            loadApplication();
+        });
+
+        // var request = new XMLHttpRequest();
+        // request.open('GET', '/api/createCall', false);
+        // request.send();
+
+        js.src = 'vendor/dependencies.bundle.min.js';
+        head.appendChild(js);
+    })();</script></html>
